@@ -48,5 +48,81 @@ public class HomeController {
             e.printStackTrace();
         }
     }
-
+    
+    @FXML
+    private void manejarOpcionCompras() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/compras/ComprasView.fxml"));
+            Parent vista = loader.load();
+            contenedorPrincipal.getChildren().setAll(vista);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    @FXML
+    private void manejarOpcionProveedores() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/proveedores/ProveedoresView.fxml"));
+            Parent vista = loader.load();
+            contenedorPrincipal.getChildren().setAll(vista);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    @FXML
+    private void manejarOpcionClientes() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/clientes/ClientesView.fxml"));
+            Parent vista = loader.load();
+            contenedorPrincipal.getChildren().setAll(vista);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    @FXML
+    private void manejarOpcionOrdenesServicio() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/ordenesServicio/OrdenesServicioView.fxml"));
+            Parent vista = loader.load();
+            contenedorPrincipal.getChildren().setAll(vista);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    @FXML
+    private void manejarOpcionFacturas() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/facturas/FacturasView.fxml"));
+            Parent vista = loader.load();
+            contenedorPrincipal.getChildren().setAll(vista);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    @FXML
+    private void manejarOpcionFichajes() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fichajes/FichajesView.fxml"));
+            Parent vista = loader.load();
+            contenedorPrincipal.getChildren().setAll(vista);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    @FXML
+    private void manejarOpcionVacaciones() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vacaciones/vacacionesView.fxml"));
+            Parent vista = loader.load();
+            contenedorPrincipal.getChildren().setAll(vista);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

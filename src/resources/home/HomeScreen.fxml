@@ -16,8 +16,8 @@
                 <MenuItem onAction="#manejarOpcionUsuarios" text="Usuarios" />
                 <MenuItem onAction="#manejarOpcionEquipos" text="Equipos" />
                 <MenuItem onAction="#manejarOpcionMantenimientos" text="Mantenimientos" />
-                <MenuItem onAction="#manejarOpcionEquipos" text="Compras" />
-                <MenuItem onAction="#manejarOpcionEquipos" text="Proveedores" />
+                <MenuItem onAction="#manejarOpcionCompras" text="Compras" />
+                <MenuItem onAction="#manejarOpcionProveedores" text="Proveedores" />
                 <MenuItem onAction="#manejarOpcionMantenimientos" text="Clientes" />
                 <MenuItem onAction="#manejarOpcionEquipos" text="Ordenes de servicio" />
                 <MenuItem onAction="#manejarOpcionEquipos" text="Facturas" />
