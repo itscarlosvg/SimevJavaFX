@@ -7,6 +7,7 @@ package controller.home;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.AnchorPane;
 
@@ -17,7 +18,7 @@ public class HomeController {
     private AnchorPane contenedorPrincipal;
 
     @FXML
-    private void manejarOpcion1() {
+    private void manejarOpcionUsuarios() {
         try {
             AnchorPane vista = FXMLLoader.load(getClass().getResource("/usuarios/UsuariosView.fxml"));
             contenedorPrincipal.getChildren().setAll(vista);
@@ -26,8 +27,15 @@ public class HomeController {
         }
     }
 
-    public void manejarOpcion2() {
-        System.out.println("Opción 2 seleccionada");
+    @FXML
+    private void manejarOpcionEquipos() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/equipos/EquiposView.fxml"));
+            Parent vista = loader.load();
+            contenedorPrincipal.getChildren().setAll(vista);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void manejarOpcion3() {

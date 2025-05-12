@@ -13,8 +13,8 @@
     <top>
         <MenuBar>
             <Menu text="Opciones">
-                <MenuItem onAction="#manejarOpcion1" text="Usuarios" />
-                <MenuItem onAction="#manejarOpcion2" text="Equipos" />
+                <MenuItem onAction="#manejarOpcionUsuarios" text="Usuarios" />
+                <MenuItem onAction="#manejarOpcionEquipos" text="Equipos" />
                 <MenuItem onAction="#manejarOpcion3" text="Mantenimientos" />
             <MenuItem onAction="#manejarOpcion3" text="Compras" />
             <MenuItem onAction="#manejarOpcion3" text="Proveedores" />
