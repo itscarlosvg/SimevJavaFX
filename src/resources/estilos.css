@@ -1,0 +1,28 @@
+.titulo-login {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.campo-texto {
+    -fx-pref-width: 250px;
+    -fx-padding: 10px;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-background-color: #ecf0f1;
+    -fx-border-color: transparent;
+}
+
+.boton-login {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 1);
+}
+
+.boton-login:hover {
+    -fx-background-color: #2980b9;
+}

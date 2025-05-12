@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600" prefWidth="800" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="controller.home.HomeController">
+    <top>
+        <MenuBar>
+            <Menu text="Opciones">
+                <MenuItem onAction="#manejarOpcion1" text="Usuarios" />
+                <MenuItem onAction="#manejarOpcion2" text="Equipos" />
+                <MenuItem onAction="#manejarOpcion3" text="Mantenimientos" />
+            <MenuItem onAction="#manejarOpcion3" text="Compras" />
+            <MenuItem onAction="#manejarOpcion3" text="Proveedores" />
+            <MenuItem onAction="#manejarOpcion3" text="Clientes" />
+            <MenuItem onAction="#manejarOpcion3" text="Ordenes de servicio" />
+            <MenuItem onAction="#manejarOpcion3" text="Facturas" />
+            <MenuItem onAction="#manejarOpcion3" text="Fichajes" />
+            <MenuItem onAction="#manejarOpcion3" text="Vacaciones" />
+            </Menu>
+        </MenuBar>
+    </top>
+    
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+            <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Pantalla Principal" />
+            <Label text="Selecciona una opción del menú" />
+        </VBox>
+    </center>
+</BorderPane>
