@@ -4,21 +4,26 @@
  */
 package controller.home;
 
+import java.io.IOException;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.MenuItem;
+import javafx.scene.layout.AnchorPane;
 
 public class HomeController {
 
-    @FXML
-    private MenuItem opcion1;
-    @FXML
-    private MenuItem opcion2;
-    @FXML
-    private MenuItem opcion3;
-    
     // Métodos que manejan las acciones del menú
-    public void manejarOpcion1() {
-        System.out.println("Opción 1 seleccionada");
+    @FXML
+    private AnchorPane contenedorPrincipal;
+
+    @FXML
+    private void manejarOpcion1() {
+        try {
+            AnchorPane vista = FXMLLoader.load(getClass().getResource("/usuarios/UsuariosView.fxml"));
+            contenedorPrincipal.getChildren().setAll(vista);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void manejarOpcion2() {

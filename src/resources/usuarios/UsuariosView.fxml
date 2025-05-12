@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1"
+            fx:controller="controller.usuarios.UsuariosController">
+    <children>
+        <VBox spacing="10" layoutX="20" layoutY="20">
+            <Label text="Gestión de Usuarios" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+            <Button text="Añadir Usuario" onAction="#agregarUsuario"/>
+            <TableView fx:id="tablaUsuarios" prefHeight="200" prefWidth="400"/>
+        </VBox>
+    </children>
+</AnchorPane>
+

@@ -6,6 +6,7 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
 <BorderPane prefHeight="600" prefWidth="800" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="controller.home.HomeController">
@@ -27,12 +28,7 @@
     </top>
     
     <center>
-        <VBox alignment="CENTER" spacing="20">
-            <padding>
-                <Insets bottom="20" left="20" right="20" top="20" />
-            </padding>
-            <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Pantalla Principal" />
-            <Label text="Selecciona una opción del menú" />
-        </VBox>
+        <AnchorPane fx:id="contenedorPrincipal" />
     </center>
+
 </BorderPane>
