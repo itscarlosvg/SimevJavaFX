@@ -15,14 +15,14 @@
             <Menu text="Opciones">
                 <MenuItem onAction="#manejarOpcionUsuarios" text="Usuarios" />
                 <MenuItem onAction="#manejarOpcionEquipos" text="Equipos" />
-                <MenuItem onAction="#manejarOpcion3" text="Mantenimientos" />
-            <MenuItem onAction="#manejarOpcion3" text="Compras" />
-            <MenuItem onAction="#manejarOpcion3" text="Proveedores" />
-            <MenuItem onAction="#manejarOpcion3" text="Clientes" />
-            <MenuItem onAction="#manejarOpcion3" text="Ordenes de servicio" />
-            <MenuItem onAction="#manejarOpcion3" text="Facturas" />
-            <MenuItem onAction="#manejarOpcion3" text="Fichajes" />
-            <MenuItem onAction="#manejarOpcion3" text="Vacaciones" />
+                <MenuItem onAction="#manejarOpcionMantenimientos" text="Mantenimientos" />
+                <MenuItem onAction="#manejarOpcionEquipos" text="Compras" />
+                <MenuItem onAction="#manejarOpcionEquipos" text="Proveedores" />
+                <MenuItem onAction="#manejarOpcionMantenimientos" text="Clientes" />
+                <MenuItem onAction="#manejarOpcionEquipos" text="Ordenes de servicio" />
+                <MenuItem onAction="#manejarOpcionEquipos" text="Facturas" />
+                <MenuItem onAction="#manejarOpcionEquipos" text="Fichajes" />
+                <MenuItem onAction="#manejarOpcionEquipos" text="Vacaciones" />
             </Menu>
         </MenuBar>
     </top>

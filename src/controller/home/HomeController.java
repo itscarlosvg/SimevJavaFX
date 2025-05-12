@@ -38,7 +38,15 @@ public class HomeController {
         }
     }
 
-    public void manejarOpcion3() {
-        System.out.println("Opción 3 seleccionada");
+    @FXML
+    private void manejarOpcionMantenimientos() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/mantenimientos/MantenimientosView.fxml"));
+            Parent vista = loader.load();
+            contenedorPrincipal.getChildren().setAll(vista);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
 }
