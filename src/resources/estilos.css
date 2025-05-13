@@ -13,6 +13,101 @@
     -fx-border-color: transparent;
 }
 
+.root {
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+    -fx-base: #3498db;
+}
+
+/* Estilo base para botones modernos */
+.modern-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+    -fx-font-weight: 700;
+    -fx-font-size: 12px;
+    -fx-padding: 10 15;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 1);
+    -fx-border-color: rgba(255,255,255,0.3);
+    -fx-border-width: 1px;
+    -fx-letter-spacing: 0.5px;
+}
+
+/* Efecto hover */
+.modern-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-text-fill: #f8f8f8;
+    -fx-border-color: rgba(255,255,255,0.5);
+}
+
+/* Efecto al presionar */
+.modern-button:pressed {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 1);
+}
+
+/* Versión alternativa con gradiente */
+.modern-button.alternative {
+    -fx-background-color: linear-gradient(to bottom, #4a6da7, #3a5a8a);
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+}
+
+.modern-button.alternative:hover {
+    -fx-background-color: linear-gradient(to bottom, #5b7db8, #4a6da7);
+}
+
+.menu-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-weight: 600;
+    -fx-font-size: 14px;
+    -fx-padding: 8 15;
+    -fx-cursor: hand;
+}
+
+.menu-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 4;
+}
+
+.menu-button:armed {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+}
+
+.menu-button .label {
+    -fx-text-fill: white;
+}
+
+.menu-button .context-menu {
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);
+    -fx-padding: 5 0;
+}
+
+.menu-button .menu-item {
+    -fx-padding: 8 15;
+    -fx-background-color: white;
+}
+
+.menu-button .menu-item:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+.menu-button .menu-item .label {
+    -fx-text-fill: #2c3e50;
+}
+
+.shadow-pane {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+    -fx-background-radius: 5;
+}
+
 .boton-login {
     -fx-background-color: #3498db;
     -fx-text-fill: white;
