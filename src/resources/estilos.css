@@ -103,6 +103,21 @@
     -fx-text-fill: #2c3e50;
 }
 
+.popup-item {
+    -fx-background-color: transparent;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 10 20;
+    -fx-font-size: 14px;
+    -fx-alignment: center-left;
+    -fx-cursor: hand;
+    -fx-background-radius: 4;
+}
+
+.popup-item:hover {
+    -fx-background-color: #ecf0f1;
+}
+
+
 .shadow-pane {
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
     -fx-background-radius: 5;

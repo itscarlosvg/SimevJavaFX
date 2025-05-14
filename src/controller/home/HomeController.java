@@ -5,20 +5,16 @@
 package controller.home;
 
 import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXPopup;
-import com.jfoenix.controls.JFXPopup.PopupHPosition;
-import com.jfoenix.controls.JFXPopup.PopupVPosition;
 import java.io.IOException;
-import java.lang.reflect.Method;
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Side;
 import javafx.scene.Parent;
+import javafx.scene.control.ContextMenu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
 
 public class HomeController {
 
@@ -29,46 +25,31 @@ public class HomeController {
     @FXML
     private JFXButton btnMasOpciones;
 
+
     @FXML
     public void initialize() {
-        System.out.println("Inicializado");
-        JFXPopup popup = new JFXPopup();
+        ContextMenu menu = new ContextMenu();
 
-        VBox content = new VBox(5);
-        content.setStyle("-fx-background-color: yellow; -fx-padding: 10;");
-        content.getChildren().addAll(
-                crearBotonPopup("COMPRAS", "#manejarOpcionCompras"),
-                crearBotonPopup("PROVEEDORES", "#manejarOpcionProveedores"),
-                crearBotonPopup("CLIENTES", "#manejarOpcionClientes"),
-                crearBotonPopup("ORDENES DE SERVICIO", "#manejarOpcionOrdenesServicio"),
-                crearBotonPopup("FACTURAS", "#manejarOpcionFacturas"),
-                crearBotonPopup("FICHAJES", "#manejarOpcionFichajes"),
-                crearBotonPopup("VACACIONES", "#manejarOpcionVacaciones")
+        menu.getItems().addAll(
+                crearMenuItem("COMPRAS", e -> manejarOpcionCompras()),
+                crearMenuItem("PROVEEDORES", e -> manejarOpcionProveedores()),
+                crearMenuItem("CLIENTES", e -> manejarOpcionClientes()),
+                crearMenuItem("ORDENES DE SERVICIO", e -> manejarOpcionOrdenesServicio()),
+                crearMenuItem("FACTURAS", e -> manejarOpcionFacturas()),
+                crearMenuItem("FICHAJES", e -> manejarOpcionFichajes()),
+                crearMenuItem("VACACIONES", e -> manejarOpcionVacaciones())
         );
 
-        popup.setPopupContent(content);
-
-        System.out.println("Boton: " + btnMasOpciones);
         btnMasOpciones.setOnAction(e -> {
-            popup.show(btnMasOpciones,
-                    PopupVPosition.BOTTOM,
-                    PopupHPosition.LEFT,
-                    0, 55);
+            // Mostrar debajo del botón
+            menu.show(btnMasOpciones, Side.BOTTOM, 0, 0);
         });
     }
 
-    private JFXButton crearBotonPopup(String texto, String handlerName) {
-        JFXButton b = new JFXButton(texto);
-        b.getStyleClass().add("menu-button");
-        b.setOnAction(e -> {
-            try {
-                Method metodo = this.getClass().getDeclaredMethod(handlerName.replace("#", ""), ActionEvent.class);
-                metodo.invoke(this, new ActionEvent());
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
-        });
-        return b;
+    private MenuItem crearMenuItem(String texto, EventHandler<ActionEvent> handler) {
+        MenuItem item = new MenuItem(texto);
+        item.setOnAction(handler);
+        return item;
     }
 
     @FXML
