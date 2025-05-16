@@ -13,8 +13,6 @@ import javafx.scene.Parent;
 import model.Sesion;
 import model.Usuario;
 import model.Usuario.Rol;
-import modelo.Usuario; // Asegúrate de importar correctamente
-import util.Sesion;    // Asegúrate de importar correctamente
 
 public class LogInController {
 

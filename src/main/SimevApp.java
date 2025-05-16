@@ -1,5 +1,5 @@
 
-package simevapp;
+package main;
 
 import javafx.application.Application;
 import javafx.application.Application;
